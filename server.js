@@ -15,15 +15,15 @@ app.get("/log",(req,res)=>{
   });
 })
 app.get('/', (req, res) => {
-  fs.readFile('target/log.html', 'utf8', (err, data) => {
-      // console.log("data: ",data);
-    if (err) {
-      console.error(err);
-      return;
-    }
-    res.send(data);
-  });
-  // res.send('Hello World!');
+  // fs.readFile('target/log.html', 'utf8', (err, data) => {
+  //     // console.log("data: ",data);
+  //   if (err) {
+  //     console.error(err);
+  //     return;
+  //   }
+  //   res.send(data);
+  // });
+  res.send('Hello World!');
 });
 
 
