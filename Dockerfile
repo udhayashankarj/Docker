@@ -4,6 +4,8 @@ FROM node:lts-alpine
 # Working directory
 WORKDIR /app
 
+# VOLUME ./ ./
+
 # Copying all files from current directory to app directory
 COPY . .
 
@@ -14,4 +16,4 @@ RUN npm install
 EXPOSE 3000
 
 # (Run-time) Default command to execute in starting of container
-CMD ["npm","run","dev"]
+CMD ["npm","run","start"]
