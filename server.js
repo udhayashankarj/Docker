@@ -3,6 +3,7 @@ const cors = require('cors')
 const fs = require('fs');
 const app = express();
 const port = 3000;
+const host = "0.0.0.0";
 app.use(cors());
 app.get("/log",(req,res)=>{
   fs.appendFile('target/log.html', `<p>LOG AT ${new Date()}<p>`, 'utf8', (err) => {
@@ -26,6 +27,6 @@ app.get('/', (req, res) => {
 });
 
 
-app.listen(port, () => {
+app.listen(port,host, () => {
   console.log(`Example app listening on port ${port}`);
 });
